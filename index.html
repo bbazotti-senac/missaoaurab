@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aurora</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <main class="container">
+        <header class="cabecalho">
+            <p class="subtitulo">EXPEDIÇÃO INTERPLANETÁRIA · 2089</p>
+            <h1>Missão Aura</h1>
+            <p>Descubra qual será o seu papel na exploração de um novo planeta.</p>
+        </header>
+
+        <section class="painel">
+            <h2>Prepare-se para a missão</h2>
+
+            <form id="formulario">
+
+                <label for="nome">Como podemos chamar você?</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome ou apelido"
+                    required
+                >
+
+                <label for="nascimento">Qual é a sua data de nascimento?</label>
+                <input
+                    type="date"
+                    id="nascimento"
+                    name="nascimento"
+                    required
+                >
+
+                <fieldset>
+                    <legend>1. Qual atividade você prefere?</legend>
+                    <select name="pergunta1" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">Construir ou consertar algo</option>
+                        <option value="2">Investigar um mistério</option>
+                        <option value="3">Explorar um lugar desconhecido</option>
+                        <option value="4">Organizar uma equipe</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Você encontrou um problema inesperado. O que faz?</legend>
+                    <select name="pergunta2" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">Testo soluções até funcionar</option>
+                        <option value="2">Pesquiso as possíveis causas</option>
+                        <option value="3">Experimento uma abordagem diferente</option>
+                        <option value="4">Organizo as tarefas para resolver o problema</option>
+                    </select>
+                </fieldset>
+
+                <!--fieldset>
+                    <legend>3. Qual equipamento levaria para o planeta?</legend>
+                    <select name="pergunta3" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">Uma ferramenta multifuncional</option>
+                        <option value="2">Um laboratório portátil</option>
+                        <option value="3">Um scanner de terrenos</option>
+                        <option value="4">Um sistema de comunicação da equipe</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Qual seria sua maior contribuição para a missão?</legend>
+                    <select name="pergunta4" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="1">Criar soluções técnicas</option>
+                        <option value="2">Descobrir como o planeta funciona</option>
+                        <option value="3">Encontrar novos caminhos</option>
+                        <option value="4">Tomar decisões e coordenar pessoas</option>
+                    </select>
+                </fieldset-->
+                
+<fieldset class="grupo-opcoes">
+    <legend>3. Qual equipamento levaria para o planeta?</legend>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta3" value="1" required>
+        Uma ferramenta multifuncional
+    </label>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta3" value="2">
+        Um laboratório portátil
+    </label>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta3" value="3">
+        Um scanner de terrenos
+    </label>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta3" value="4">
+        Um sistema de comunicação da equipe
+    </label>
+</fieldset>
+
+<fieldset class="grupo-opcoes">
+    <legend>4. Qual seria sua maior contribuição para a missão?</legend>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta4" value="1" required>
+        Criar soluções técnicas
+    </label>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta4" value="2">
+        Descobrir como o planeta funciona
+    </label>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta4" value="3">
+        Encontrar novos caminhos
+    </label>
+
+    <label class="opcao-radio">
+        <input type="radio" name="pergunta4" value="4">
+        Tomar decisões e coordenar pessoas
+    </label>
+</fieldset>
+
+
+                <button type="submit">Descobrir meu perfil</button>
+            </form>
+        </section>
+
+        <section id="resultado" class="painel resultado" hidden>
+            <p class="subtitulo">RELATÓRIO DA EXPEDIÇÃO</p>
+            <h2 id="tituloResultado"></h2>
+            <p id="resumoResultado"></p>
+            <div id="perfisResultado" class="perfis-resultado"></div>
+
+            <button type="button" id="refazer" class="botao-secundario">
+                Refazer o teste
+            </button>
+        </section>
+
+        <footer>
+            <p>Missão Aura · Programa de exploração espacial</p>
+        </footer>
+    </main>
+<script src="js/script.js" defer></script>
+</body>
+</html>
